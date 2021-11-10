@@ -1,13 +1,14 @@
 {
   "name": "chayma",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Programming Challenge: Card Game",
+  "main": "solution.js",
   "scripts": {
+    "start": "node solution.js",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chayma",
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.3.1"
