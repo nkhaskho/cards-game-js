@@ -2,9 +2,9 @@
   "name": "chayma",
   "version": "1.0.0",
   "description": "Programming Challenge: Card Game",
-  "main": "solution.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node solution.js",
+    "start": "node main.js",
     "test": "jest"
   },
   "keywords": [],
