@@ -39,7 +39,7 @@ describe("Task 3: Playing a turn", () => {
     });
     test("When comparing two cards of the same value, the winner of the next round should win 4 cards", () => {
         player1 = new myImpl.Player("Player 1", [5, 4], []);
-        player2 = new myImpl.Player("Player 2", [9, 4], []);
+        player2 = new myImpl.Player("Player 2", [5, 9], []);
         reportedCards = []
         // round 1, equality => 2 reported cards
         reportedCards = myImpl.nextRound(player1, player2, reportedCards)

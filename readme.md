@@ -3,7 +3,7 @@
 
 This project contain 4 files
 - **readme.md**: contain project description and environment configuration
-- **package.json**: contain project description and environment configuration
+- **package.json**: contain project details and requirements dependencies
 - **main.js**: main game program
 - **solution.js**: exported implementation module, to be used in main game
 - **solution.spec.js**: test

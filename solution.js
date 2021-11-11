@@ -25,7 +25,7 @@ class Player {
         if (this.drawPile.length == 0) {
             this.drawPile = shuffle(this.discardPile)
         }
-        let card = this.drawPile.pop()
+        let card = this.drawPile.shift()
         console.log(`${this.name} (${this.drawPile.length + 1 } cards): ${card}`) // ${this.drawPile.length + 1
         return card
     }
@@ -41,12 +41,12 @@ function nextRound(player1, player2, reportedCards) {
     card2 = player2.drawCard()
     if (card2 < card1) {
         winner = player1.name
-        player1.discardPile.push(card1, card2)
+        player1.discardPile.unshift(card1, card2)
         player1.discardPile.push(...reportedCards)
         reportedCards = []
     } else if (card2 > card1){
         winner = player2.name
-        player2.discardPile.push(card1, card2)
+        player2.discardPile.unshift(card1, card2)
         player2.discardPile.push(...reportedCards)
         reportedCards = []
     } else {
