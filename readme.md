@@ -1,7 +1,12 @@
 ## Environment
 **Node** version 14.X.Y
 
-<br>
+This project contain 4 files
+- **readme.md**: contain project description and environment configuration
+- **package.json**: contain project description and environment configuration
+- **main.js**: main game program
+- **solution.js**: exported implementation module, to be used in main game
+- **solution.spec.js**: test
 
 ### Install required dependencies
 The only external npm package which is required for this solution is the **jest** library which is used for testing purpose
