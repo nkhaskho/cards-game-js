@@ -11,7 +11,7 @@ describe("Task 1: Create a shuffled deck of cards", () => {
     test("A shuffle function should shuffle a deck", () => {
         let deck = myImpl.createDeck();
         deck = myImpl.shuffle(deck);
-        // TODO: to be reviewed
+        // TODO: to be reviewed ???
         expect(deck[0]).not.toBe(1);
     });
 });
@@ -38,16 +38,14 @@ describe("Task 3: Playing a turn", () => {
         expect(card1<card2).toEqual(true); 
     });
     test("When comparing two cards of the same value, the winner of the next round should win 4 cards", () => {
-        player1 = new myImpl.Player("Player 1", [4, 4], []);
-        player2 = new myImpl.Player("Player 2", [4, 6], []);
-        // 1st round, equality
-        card1 = player1.drawCard()
-        card2 = player2.drawCard()
-        // 2nd round, player2 win
-        card1 = player1.drawCard()
-        card2 = player2.drawCard()
-
-        expect(player2.discardPile.length).toBe(4); 
+        player1 = new myImpl.Player("Player 1", [5, 4], []);
+        player2 = new myImpl.Player("Player 2", [9, 4], []);
+        reportedCards = []
+        // round 1, equality => 2 reported cards
+        reportedCards = myImpl.nextRound(player1, player2, reportedCards)
+        // round 2
+        reportedCards = myImpl.nextRound(player1, player2, reportedCards)
+        expect(player2.playerCards()).toEqual(4); 
     });
 });
 
